@@ -1,0 +1,18 @@
+<div>
+    <h2>Student Registration</h2>
+    <form (ngSubmit)="registerStudent()">
+    <label for="name">Name</label>
+    <input id="name" [(ngModel)]="newStudent.name" name="name" required />
+    <label for="department">Department</label>
+    <input id="department" [(ngModel)]="newStudent.department" name="department" required />
+    <label for="email">Email</label>
+    <input id="email" [(ngModel)]="newStudent.email" name="email" required />
+    <button type="submit">Register</button>
+    </form>
+    <h3>Registered Students</h3>
+    <ul>
+      <li *ngFor="let student of students">
+        {{ student.name }} - {{ student.department }} - {{ student.email }}
+    </li>
+    </ul>
+</div>
